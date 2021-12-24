@@ -41,7 +41,7 @@
                 android:text="Nome do Usuário" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/etNomeUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -62,7 +62,7 @@
                 android:text="E-mail" />
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/etEmailUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -82,7 +82,7 @@
                 android:text="Senha" />
 
             <EditText
-                android:id="@+id/editTextTextPassword3"
+                android:id="@+id/etSenhaUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -102,7 +102,7 @@
                 android:text="Repita a Senha" />
 
             <EditText
-                android:id="@+id/editTextTextPassword4"
+                android:id="@+id/etRepitaSenhaUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -120,6 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="Gravar"
                 android:text="@string/btnGravar" />
 
             <Space
