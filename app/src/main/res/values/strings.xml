@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Financeiro</string>
+
+    //Login
+    <string name="tituloLogin">LOGIN</string>
+    <string name="btnLogar">ENTRAR</string>
+    <string name="cadastrar">
+        <u>Cadastre-se</u>
+    </string>
+    //FIM Login
+
+    //Cadastro
+    <string name="tituloCadastroUsuario">CADASTRO DE USUÁRIO</string>
+    //FIM Cadastro
+
+    //Geral
+    <string name="btnVoltar">VOLTAR</string>
+    <string name="btnGravar">GRAVAR</string>
+    //FIM Geral
 </resources>
