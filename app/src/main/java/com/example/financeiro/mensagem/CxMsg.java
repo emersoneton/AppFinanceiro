@@ -1,4 +1,4 @@
-package com.example.financeiro;
+package com.example.financeiro.mensagem;
 
 import android.app.Activity;
 

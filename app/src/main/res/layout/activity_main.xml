@@ -26,7 +26,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/etLogin"
+        android:id="@+id/etUsuarioLogin"
         android:layout_width="321dp"
         android:layout_height="48dp"
         android:backgroundTint="#000000"
@@ -38,14 +38,14 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/etSenha"
+        app:layout_constraintBottom_toTopOf="@+id/etSenhaLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.691" />
 
     <EditText
-        android:id="@+id/etSenha"
+        android:id="@+id/etSenhaLogin"
         android:layout_width="321dp"
         android:layout_height="48dp"
         android:backgroundTint="#000000"
@@ -67,6 +67,7 @@
         android:id="@+id/btnLogar"
         android:layout_width="160dp"
         android:layout_height="65dp"
+        android:onClick="Logar"
         android:text="@string/btnLogar"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -75,7 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSenha"
+        app:layout_constraintTop_toBottomOf="@+id/etSenhaLogin"
         app:layout_constraintVertical_bias="0.112" />
 
     <TextView

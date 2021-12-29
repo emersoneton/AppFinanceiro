@@ -2,11 +2,13 @@ package com.example.financeiro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.financeiro.database.UsuarioDAO;
+import com.example.financeiro.mensagem.CxMsg;
 
 public class CadastroUsuario extends AppCompatActivity {
 
@@ -31,8 +33,7 @@ public class CadastroUsuario extends AppCompatActivity {
     }
 
     public void Gravar(View view){
-        Database.AbrirBanco(this);
-        Database.AbrirTabelaUsuario(this);
+        UsuarioDAO.AbrirTabelaUsuario(this);
 
         String nome, email, senha, repitaSenha;
         nome=etNomeUsuario.getText().toString();
@@ -43,8 +44,11 @@ public class CadastroUsuario extends AppCompatActivity {
         if(ValidarCampos(nome,email,senha,repitaSenha)){
 
             if(CompararSenhas(senha, repitaSenha)){
-                // Database.InserirRegistroUsuario(this, nome, email, senha);
-                CxMsg.Mensagem("nome: " +nome+ " Email: "+email+" Senha: "+senha, this);
+
+                 if(UsuarioDAO.InserirRegistroUsuario(this, nome, email, senha)){
+                     LimparCampos();
+                 }
+
             }else{
                 CxMsg.Mensagem("As senhas não conferem!", this);
             }
@@ -82,4 +86,12 @@ public class CadastroUsuario extends AppCompatActivity {
         }
         return true;
     }
+
+    private void LimparCampos(){
+        etNomeUsuario.setText("");
+        etEmailUsuario.setText("");
+        etSenhaUsuario.setText("");
+        etRepitaSenhaUsuario.setText("");
+    }
+
 }
