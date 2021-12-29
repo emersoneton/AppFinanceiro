@@ -2,6 +2,7 @@ package com.example.financeiro.database;
 
 import static android.content.Context.MODE_PRIVATE;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContextWrapper;
 import android.database.Cursor;
@@ -33,29 +34,34 @@ public class LoginDAO {
         Log.v("BancodeDados", "Banco de Dados (FECHADO)!");
     }
 
-    public static void Logar(Activity activity, String nome, String senha){
+    @SuppressLint("Range")
+    public static boolean Logar(Activity activity, String nome, String senha){
 
         cursor = BuscarDados(activity);
 
         String nomeUsuario, senhaUsuario;
+        Boolean validaLogin = false;
 
-        for(int x=0; x < cursor.getCount(); x++){
-           // msg.Mensagem("Nome: "+cursor.getString(cursor.getColumnIndex("nome"))+ "Senha: "+cursor.getString(cursor.getColumnIndex("senha")),activity);
+        try {
 
-            try {
+            for(int x=0; x < cursor.getCount(); x++) {
+
                 cursor.moveToNext();
 
                 nomeUsuario = cursor.getString(cursor.getColumnIndex("nome"));
                 senhaUsuario = cursor.getString(cursor.getColumnIndex("senha"));
 
-                if(nome.equals(nomeUsuario) & senha.equals(senhaUsuario)){
-                    msg.Mensagem("Login OK", activity);
+                if (nome.equals(nomeUsuario) & senha.equals(senhaUsuario)) {
+                    validaLogin = true;
                 }
 
-            }catch (Exception ex){
-                Log.v("BancodeDados", "Erro ao buscar Usuario e Senha no Login!");
             }
+
+        }catch (Exception ex){
+            Log.v("BancodeDados", "Erro ao buscar Usuario e Senha no Login!");
         }
+
+        return validaLogin;
 
     }
 

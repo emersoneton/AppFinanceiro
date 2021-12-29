@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Financeiro">
         <activity
-            android:name=".CadastroUsuario"
+            android:name=".View.PagamentoDevedor"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".View.TelaPrincipal"
+            android:exported="false" />
+        <activity
+            android:name=".View.CadastroUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".View.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

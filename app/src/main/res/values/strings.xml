@@ -13,6 +13,10 @@
     <string name="tituloCadastroUsuario">CADASTRO DE USUÁRIO</string>
     //FIM Cadastro
 
+    //TelaPrincipal
+    <string name="btnCadastrar">CADASTRA PAGAMENTO</string>
+    //Fim TelaPrincipal
+
     //Geral
     <string name="btnVoltar">VOLTAR</string>
     <string name="btnGravar">GRAVAR</string>

@@ -1,4 +1,4 @@
-package com.example.financeiro;
+package com.example.financeiro.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.financeiro.R;
 import com.example.financeiro.database.UsuarioDAO;
 import com.example.financeiro.mensagem.CxMsg;
 
